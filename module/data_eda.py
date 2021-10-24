@@ -59,3 +59,8 @@ def qty_plot(date_dic):
       y= "일별수량"
   )
   plt.ylim(0, 100000) 
+    
+def date_split(data):
+    data["year"]=final_data["주문날짜"].str[:4]
+    data["month"]=final_data["주문날짜"].str[4:6]
+    data["day"]=final_data["주문날짜"].str[6:]
